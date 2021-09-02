@@ -41,4 +41,22 @@ fun main(){
     var charValue: Char = 'a'
     var koreanCharValue: Char = '가'
     println("charValue: $charValue - koreanValue: $koreanCharValue");
+
+    // Boolean Type
+    var booleanValue: Boolean = true
+    println("booleanValue: $booleanValue");
+
+    // String type
+    var stringValue: String = "one line string test"
+    var newStringValue = "more shorter version of one line string test"
+    println("stringValue: $stringValue\nnewStringValue: $newStringValue");
+
+    // Variable line of String
+    var multiLineStringValue = """
+        Multiple
+        Line
+        String
+        Test
+    """
+    println("multiLineStringValue: $multiLineStringValue");
 }
