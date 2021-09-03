@@ -1,4 +1,5 @@
 fun main(){
+    // Type Interface
     var a = 1234
     var b = 1234L
 
@@ -11,15 +12,24 @@ fun main(){
     var g = true
     var h = 'c'
 
+    printTypeInterface(a, b, c, d, e, f, g, h);
+
     var ayo: Int? = null
     
     if(ayo == null){
         println("ayo: $ayo -> is NULL");
-    } 
+    } else {
+        println("ayo: $ayo");
+    }
 
     ayo = 10;
 
     if(!(ayo.equals(null))){
         println("ayo: $ayo");
     }
+}
+
+fun printTypeInterface(a: Int, b: Long, c: Double, d: Float, e: Int, f: Int, g: Boolean, h: Char){
+    println("a: $a\nb: $b\nc: $c\nd: $d\ne: $e\nf: $f\ng: $g\nh: $h");
+    println();
 }
