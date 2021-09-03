@@ -12,7 +12,7 @@ fun main(){
     var g = true
     var h = 'c'
 
-    printTypeInterface(a, b, c, d, e, f, g, h);
+    var printStringValue: String = printTypeInterface(a, b, c, d, e, f, g, h);
 
     var ayo: Int? = null
     
@@ -25,11 +25,17 @@ fun main(){
     ayo = 10;
 
     if(!(ayo.equals(null))){
-        println("ayo: $ayo");
+        println("ayo: $ayo\n");
+        println(printStringValue);
     }
 }
 
-fun printTypeInterface(a: Int, b: Long, c: Double, d: Float, e: Int, f: Int, g: Boolean, h: Char){
-    println("a: $a\nb: $b\nc: $c\nd: $d\ne: $e\nf: $f\ng: $g\nh: $h");
-    println();
+// fun printTypeInterface(a: Int, b: Long, c: Double, d: Float, e: Int, f: Int, g: Boolean, h: Char){
+//     println("a: $a\nb: $b\nc: $c\nd: $d\ne: $e\nf: $f\ng: $g\nh: $h");
+//     println();
+// }
+
+fun printTypeInterface(a: Int, b: Long, c: Double, d: Float, e: Int, f: Int, g: Boolean, h: Char): String{
+    var stringValue: String = "a: $a\nb: $b\nc: $c\nd: $d\ne: $e\nf: $f\ng: $g\nh: $h";
+    return stringValue;
 }
