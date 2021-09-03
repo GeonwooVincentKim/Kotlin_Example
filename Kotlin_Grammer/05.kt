@@ -68,4 +68,30 @@ fun main(){
     for(i in 'a'..'e'){
         print(i);
     }
+
+    println();
+
+    /*
+        For-Loop check the condition of values inside the `Inner-For-Loop`
+        -> Pass the `if` condition part
+    */
+    for(i in 1..10){
+        for(j in 1..10){
+            if(i == 1 && j == 2) break
+            println("i: $i - j: $j");
+        }
+    }
+
+    println();
+
+    /*
+        For-Loop check the condition of values inside the `Inner-For-Loop`
+        -> Break the program execution
+    */
+    loop@for(i in 1..10){
+        for(j in 1..10){
+            if(i == 1 && j == 2) break@loop
+            println("i: $i - j: $j");
+        }
+    }
 }
