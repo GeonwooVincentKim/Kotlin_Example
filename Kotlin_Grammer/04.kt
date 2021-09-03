@@ -17,4 +17,24 @@ fun main(){
     } else {
         println(false);
     }
+
+    doWhen(1);
+    doWhen("String");
+    doWhen(12L);
+    doWhen(3.141592);
+    doWhen("This is String. You can change this part");
+    doWhen(0x01010101);
+}
+
+// Any: Allowed all of type of Kotlin Programming Language
+fun doWhen(a: Any){
+    when(a){
+        1 -> println("정수 1입니다")
+        "String" -> println("문자열입니다.")
+        
+        is Long -> println("Long Type 변수입니다")
+        !is String -> println("String 입니다")
+
+        else -> println("어떤 조건도 만족하지 않습니다")
+    }
 }
