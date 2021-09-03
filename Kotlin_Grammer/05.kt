@@ -59,4 +59,13 @@ fun main(){
     for(i in 9 downTo 0 step 3){
         print("$i ");
     }
+
+    println();
+
+    /*
+        For-Loop values going up -> Character Type
+    */
+    for(i in 'a'..'e'){
+        print(i);
+    }
 }
