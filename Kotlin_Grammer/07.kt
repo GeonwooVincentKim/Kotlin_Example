@@ -4,6 +4,13 @@ fun main(){
     
     a.introduce();
     b.introduce();
+
+    b.bark();
+
+    var c = Cat("루이", 1);
+
+    c.introduce();
+    c.meow();
 }
 
 /* Parent Class (Super Class) */
@@ -23,5 +30,13 @@ open class Animal(var name: String, var age: Int, var type: String){
     }
 */
 class Dog(name: String, age: Int) : Animal(name, age, "개"){
-    
+    fun bark(){
+        println("멍멍");
+    }
+}
+
+class Cat(name: String, age: Int) : Animal(name, age, "고양이"){
+    fun meow(){
+        println("야옹야옹");
+    }
 }
