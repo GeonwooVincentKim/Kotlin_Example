@@ -1,5 +1,13 @@
 fun main(){
     b(::a)
+
+    // It's not necessary to write `String` when you wrote
+    // `str` in front of Colon, `:`
+    // Because it already described in `Kotlin` Parameter Data-Type
+
+    /* Lambda Function */
+    val c: (String)->Unit = { str -> println("$str 람다함수") }
+    b(c)
 }
 
 /*
@@ -10,7 +18,7 @@ fun a (str: String){
 }
 
 /*
-    Unit - No `Return Type` 
+    Unit - No `Return Type` -> void
 */
 fun b (function: (String) -> Unit){
     function("b가 호출한")
