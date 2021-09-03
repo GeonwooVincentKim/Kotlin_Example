@@ -9,8 +9,10 @@ fun main(){
     }
 
     var testValue: Int = 50
+    // var testValue = 50
 
-    if(testValue is Int){
+    // if(testValue is Int){
+    if(testValue.equals(Int)){
         println(true);
     } else {
         println(false);
