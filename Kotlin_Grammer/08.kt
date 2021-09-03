@@ -1,3 +1,5 @@
+package com.kotlintest.Kotlin_Grammer
+
 fun main(){
     var t = Tiger()
     t.eat()
