@@ -1,3 +1,5 @@
+package com.kotlintest
+
 // Press `Ctrl + alt + n` to execute program
 fun greeting(){
     println("Hello World");
