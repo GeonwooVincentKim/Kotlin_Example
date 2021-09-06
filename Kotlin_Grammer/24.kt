@@ -5,4 +5,10 @@ fun main(){
     
     println(personList.associateBy { it.birthYear })
     println(personList.groupBy{it.name})
+
+    println()
+
+    val (over98, under98) = personList.partition { it.birthYear > 1998 }
+    println(over98)
+    println(under98)
 }
