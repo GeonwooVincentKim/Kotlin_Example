@@ -13,6 +13,24 @@ fun main(){
     println(a.getLateInitText())
     a.text = "A value that reallocated newly"
     println(a.getLateInitText())
+
+    println()
+    println("-------------------------")
+    println()
+
+    /*
+        Lazy -> 
+        1. Use Lambda function to initialize variable
+        2. One Single function could have lots of features(Sentence Structure)
+    */)
+    val number: Int by lazy{
+        println("Initializing..")
+        7
+    }
+
+    println("Start Code")
+    println(number)
+    println(number)
 }
 
 class FoodCourt(){
