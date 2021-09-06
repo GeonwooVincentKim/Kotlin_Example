@@ -23,12 +23,30 @@ fun main(){
         a.name = "[초특가]" + a.name
         a.discount()
 
+    /*
+        Instance.Run
+        -> The variable of Instance could be pushed back on the priority list cause by `local variable`
+        that includes `run` method
+        -> In this case, it would be better to use `let`
+    **/
     a.run{
         println("No Apply Scope Function")
         println("상품명 : ${name}, 가격 ${price}원")
     }
+
+    /*
+        with(instance)
+        -> Get the instance variable as the Parameter of `with`
+    */
+    println();
+    with(a){
+        println("With")
+        println("상품명 : ${name}, 가격 ${price}원")
+    }
         
-    println()
+    println();
+
+    var price: Int = 5000
     var applyInstance = Book("Demo's Kotlin", 10000).apply{
         name = "[초특가]" + name
         discount()
@@ -37,6 +55,10 @@ fun main(){
     applyInstance.run{
         println("With Apply Scope Function")
         println("상품명 : ${name}, 가격 ${price}원")
+    }
+    
+    applyInstance.let{
+        println("상품명 : ${it.name}, 가격 ${it.price}원")
     }
 }
 
