@@ -22,6 +22,15 @@ fun main(){
     for((c, d) in list){
         println("${c}, ${d}")
     }
+
+    var state = State.SING
+    println(state)
+
+    state = State.SLEEP
+    println(state.isSleeping())
+
+    state = State.EAT
+    println(state.message)
 }
 
 class General(val name: String, val id: Int)
@@ -32,3 +41,11 @@ class General(val name: String, val id: Int)
     The Data Class is also similar with `String` in Kotlin
 */
 data class Data(val name: String, val id: Int)
+
+enum class State(val message: String){
+    SING("SING"),
+    EAT("EAT"),
+    SLEEP("SLEEP");
+
+    fun isSleeping() = this == State.SLEEP
+}
