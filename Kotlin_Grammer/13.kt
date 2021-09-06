@@ -1,5 +1,5 @@
 fun main(){
-
+    EventPrinter().start()
 }
 
 interface EventListener{
@@ -9,14 +9,18 @@ interface EventListener{
 class Counter(var listener: EventListener){
     fun count(){
         for(i in 1..100){
-            if(i% 5 == 10) listener.onEvent(i)
+            if(i % 5 == 0) listener.onEvent(i)
         }
     }
 }
 
 class EventPrinter: EventListener{
     override fun onEvent(count: Int){
-        print("${count} - ")
+        if(count == 100){
+            print("${count}")
+        } else {
+            print("${count} - ")
+        }
     }
 
     fun start(){
