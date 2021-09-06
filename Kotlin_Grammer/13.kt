@@ -14,17 +14,17 @@ class Counter(var listener: EventListener){
     }
 }
 
-class EventPrinter: EventListener{
-    override fun onEvent(count: Int){
-        if(count == 100){
-            print("${count}")
-        } else {
-            print("${count} - ")
-        }
-    }
-
+class EventPrinter(){
     fun start(){
-        val counter = Counter(this)
-        counter.count()
+        val counter = Counter(object: EventListener{
+            override fun onEvent(count: Int){
+                if(count == 100){
+                    print("${count}")
+                } else {
+                    print("${count} - ")
+                }
+            }
+        });
+        counter.count();
     }
 }
