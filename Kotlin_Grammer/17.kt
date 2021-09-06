@@ -32,10 +32,23 @@ fun main(){
     // println(emptyString.isNullOrEmpty())
     // println(blankString.isNullOrEmpty())
     // println(normalString.isNullOrEmpty())
+
+    println();
+
+    checkStringIsBlank(nullString.toString());
+    checkStringIsBlank(emptyString);
+    checkStringIsBlank(blankString);
+    checkStringIsBlank(normalString);
 }
 
 fun checkStringIsNull(value: String) : Boolean{
     var getValue = value.isNullOrEmpty();
-    println("Your value status : ${getValue}")
+    println("Your value status (Null || Empty) : ${getValue}");
+    return getValue;
+}
+
+fun checkStringIsBlank(value: String) : Boolean{
+    var getValue = value.isNullOrBlank();
+    println("Your value Status (Null || Blank) : ${getValue}");
     return getValue;
 }
