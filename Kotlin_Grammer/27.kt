@@ -3,9 +3,22 @@ import kotlinx.coroutines.*
 fun main(){
     val scope = GlobalScope
     
-    scope.launch{
-        for(i in 1..5){
-            print(i)
+    runBlocking{
+       	val a = launch{
+        	for(i in 1..5){
+            	println(i)
+        	}
+    	} 
+        
+        val b = async {
+            "async 종료"
         }
-    }
+        
+        println("async 대기")
+        println(b.await())
+        
+        println("launch 대기")
+        a.join()
+        println("launch 종료")
+    }  	
 }
