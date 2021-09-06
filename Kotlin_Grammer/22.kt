@@ -34,4 +34,9 @@ fun main(){
 
     b.put("오마이걸", "번지")
     println(b)
+
+    b.remove("ITZY")
+    println(b)
+
+    println(b["레드벨벳"])
 }
