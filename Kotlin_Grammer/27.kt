@@ -22,4 +22,16 @@ fun main(){
         a.cancel()
         println("launch 종료")
     }  	
+
+    runBlocking {
+        var result = withTimeoutOrNull(50){
+            for(i in 1..10){
+                println(i)
+                delay(10)
+            }
+            "Finish"
+        }
+        
+        println(result)
+    }
 }
