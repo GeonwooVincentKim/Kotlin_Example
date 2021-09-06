@@ -7,6 +7,7 @@ fun main(){
        	val a = launch{
         	for(i in 1..5){
             	println(i)
+                delay(10)
         	}
     	} 
         
@@ -17,8 +18,8 @@ fun main(){
         println("async 대기")
         println(b.await())
         
-        println("launch 대기")
-        a.join()
+        println("launch 취소")
+        a.cancel()
         println("launch 종료")
     }  	
 }
