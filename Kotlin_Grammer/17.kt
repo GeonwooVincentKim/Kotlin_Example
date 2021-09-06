@@ -39,6 +39,22 @@ fun main(){
     checkStringIsBlank(emptyString);
     checkStringIsBlank(blankString);
     checkStringIsBlank(normalString);
+
+    println();
+    println("-----------------------------");
+    println();
+
+    var test3 = "kotlin.kt"
+    var test4 = "java.java"
+
+    println(test3.startsWith("java"))
+    println(test4.startsWith("java"))
+
+    println(test3.endsWith(".kt"))
+    println(test4.endsWith(".kt"))
+
+    println(test3.contains("lin"))
+    println(test4.contains("lin"))
 }
 
 fun checkStringIsNull(value: String) : Boolean{
