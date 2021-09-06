@@ -20,4 +20,13 @@ fun main(){
 
     b.add(2, 8)
     println(b)
+
+    b.removeAt(1)
+    println(b)
+    
+    b.shuffle()
+    println(b)
+
+    b.sort()
+    println(b)
 }
