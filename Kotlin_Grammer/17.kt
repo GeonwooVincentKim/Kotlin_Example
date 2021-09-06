@@ -11,4 +11,31 @@ fun main(){
     println(test2.joinToString())
     println(test2.joinToString("-"))
     println(test2.joinToString(" - "))
+
+    println(test1.substring(5..10))
+
+    val nullString: String? = null
+    var emptyString = ""
+    var blankString = " "
+    var normalString = "A"
+
+    println();
+    println("-----------------------------");
+    println();
+
+    checkStringIsNull(nullString.toString());
+    checkStringIsNull(emptyString);
+    checkStringIsNull(blankString);
+    checkStringIsNull(normalString);
+
+    // println(nullString.isNullOrEmpty())
+    // println(emptyString.isNullOrEmpty())
+    // println(blankString.isNullOrEmpty())
+    // println(normalString.isNullOrEmpty())
+}
+
+fun checkStringIsNull(value: String) : Boolean{
+    var getValue = value.isNullOrEmpty();
+    println("Your value status : ${getValue}")
+    return getValue;
 }
