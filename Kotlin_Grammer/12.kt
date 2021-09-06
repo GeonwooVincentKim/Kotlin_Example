@@ -1,15 +1,15 @@
 fun main(){
     /* Singleton Pattern Example Code */
-    println(Counter.count);
+    println(SingletonCounter.count);
 
-    Counter.countUp()
-    Counter.countUp()
+    SingletonCounter.countUp()
+    SingletonCounter.countUp()
     
-    println(Counter.count);
+    println(SingletonCounter.count);
     
-    Counter.clear();
+    SingletonCounter.clear();
 
-    println(Counter.count);
+    println(SingletonCounter.count);
     println();
 
     /* Companion Object Pattern (Static Pattern) Example Code */
@@ -29,7 +29,7 @@ fun main(){
 }
 
 /* SingleTon Pattern */
-object Counter{
+object SingletonCounter{
     var count = 0
 
     fun countUp(){
